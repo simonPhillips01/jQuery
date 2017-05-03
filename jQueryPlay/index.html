@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryPlay</title>
+	<h1 onclick="$(this).hide()">Hello...</h1>
+
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="section group">
+	<div class="col span_1_of_4">
+	<p>Lorem ipsum</p>
+	<button>click</button>
+	</div>
+	<div class="col span_1_of_4">
+	<p class="para">Lorem ipsum 2</p>
+	<button id="btn">click</button>
+	</div>
+	<div class="col span_1_of_4">
+	1 of 4
+	</div>
+	<div class="col span_1_of_4">
+	1 of 4
+	</div>
+</div>
+<script>
+	$("button").click(function() {
+		$("p").hide();
+	});
+	$("button").dblclick(function() {
+		$("p").show();
+	});
+
+	$("document").ready(function() {
+		$("#btn").click(function() {
+			$(".para").removeClass(".para")addClass("second");
+		});
+	});
+</script>
+
+</body>
+</html>
